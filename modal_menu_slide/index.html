@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      A-Logo
+    </div>
+    <ul>
+      <li><a href="#">主页</a></li>
+      <li><a href="#">关于我们</a></li>
+      <li><a href="#">课程介绍</a></li>
+      <li><a href="#">联系我们</a></li>
+    </ul>
+  </nav>
+  <header>
+    <button id="toggle" class="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+    <h1>欢迎来到XXXX网站</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, modi?</p>
+    <button class="cta-btn" id="open">登录</button>
+  </header>
+  <div class="container">
+    <h2>为什么来到XXXX网站</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nemo deserunt quis eligendi ratione consequuntur officiis. Nulla doloremque modi voluptate?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam doloremque dolorem libero perferendis quia aliquam aspernatur minus eum deleniti veniam.</p>
+    <h2>我们的教学宗旨</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptates ut, eaque at beatae facilis quod minus corrupti omnis harum?</p>
+    <h2>我们的优势</h2>
+    <ul>
+      <li>丰富的新阿航</li>
+      <li>优秀的之子团推</li>
+      <li>课后辅导季文达</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit at, magni aperiam assumenda blanditiis nobis porro modi quod ut quo odit, nemo eligendi vitae unde ipsum placeat totam nulla, delectus sint repellendus. Quasi voluptatum officiis vero repudiandae eum optio labore quidem obcaecati cumque quibusdam enim, nobis cupiditate architecto a explicabo laboriosam ullam expedita libero ad soluta provident! Laboriosam voluptas quod in magnam exercitationem, porro deserunt debitis voluptates, tenetur odit voluptatem.</p>
+  </div>
+  <!-- modal -->
+  <div class="modal-container" id="modal">
+    <div class="modal">
+      <button class="close-btn" id="close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>登录</h3>
+      </div>
+      <div class="modal-content">
+        <p>登录了解更多课程和促销活动</p>
+        <form class="modal-form">
+          <div>
+            <label for="name">姓名</label>
+            <input type="text" id="name" placeholder="请输入姓名" class="form-input">
+          </div>
+          <div>
+            <label for="name">邮箱</label>
+            <input type="text" id="email" placeholder="请输入邮箱" class="form-input">
+          </div>
+          <div>
+            <label for="password">密码</label>
+            <input type="password" id="password" placeholder="请输入密码" class="form-input">
+          </div>
+          <div>
+            <label for="password2">确认密码</label>
+            <input type="password" id="password2" placeholder="请再次输入密码" class="form-input">
+          </div>
+          <input type="submit" value="提交" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root {
+  --modal-duration:0.5s;
+  --primary-color:#30336b;
+  --secondary-color:#ba21dd;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  transition: transfrom 0.9s ease-in-out;
+  -webkit-transition: transfrom 0.9s ease-in-out;
+  -moz-transition: transfrom 0.9s ease-in-out;
+  -ms-transition: transfrom 0.9s ease-in-out;
+  -o-transition: transfrom 0.9s ease-in-out;
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  position: fixed;
+  top:0;
+  left:0;
+  width:200px;
+  height: 100%;
+  z-index:100;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+body.show-nav {
+  transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -o-transform: translateX(200px);
+  transition: var(--modal-duration) ease;
+  -webkit-transition: var(--modal-duration) ease;
+  -moz-transition: var(--modal-duration) ease;
+  -ms-transition: var(--modal-duration) ease;
+  -o-transition: var(--modal-duration) ease;
+}
+nav .logo {
+  padding:10px;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  border:1px solid #fff;
+  margin:16px;
+}
+nav ul {
+  padding:0;
+  list-style: none;
+  margin:0;
+}
+nav ul li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  padding: 20px;
+}
+nav ul li a {
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: azure;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* 首页 */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  text-align: center;
+  position: relative;
+  padding: 40px 15px;
+}
+header h1 {
+  margin:0;
+}
+header p {
+  margin: 30px 0;
+}
+button, input[type='submit'] {
+  background-color: var(--secondary-color);
+  border:0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color:#fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+.modal-container {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right: 0;
+  background-color:rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.modal-container.show-modal {
+  display: block;
+
+}
+.modal-container .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  animation: modalopen var(--modal-duration);
+  -webkit-animation: modalopen var(--modal-duration);
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+.modal-header {
+  background-color: var(--primary-color);
+  color:#fff;
+  padding: 15px;
+}
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+.close-btn {
+  background-color: transparent;
+  position: absolute;
+  top:O;
+  right: 0;
+  font-size: 25px;
+}
+.modal-content {
+  padding:20px;
+}
+.modal-form div{
+  margin: 15px 0;
+
+}
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
