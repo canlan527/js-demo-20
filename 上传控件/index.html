@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file" name="files" id="fileUploader" multiple/>  
+  <input type="button" onclick="uploadFile()" value="Upload" />  
+
+<script src="./upload.js"></script>
+<script>
+  //上传进度回调函数
+  function getUploadingInfo(resp){
+      console.log(resp);
+  }
+  //创建文件上传对象
+  var uploader = new XUploader();
+  //通过input框id初始化
+  uploader.bindFiles("fileUploader");
+  //设置上传进度回调函数
+  uploader.setOnUploadingListener(getUploadingInfo);
+   //上传
+  function uploadFile() {  
+    //除文件之外的键值对附带信息
+    var params = new HashMap();
+    params.put("test","123");
+    params.put("test2","1232");
+    //设置上传参数
+    uploader.setParams(params);
+    //上传文件跟附带参数信息，参数为自己接口
+    uploader.upload('uploadCommonSoftware');
+  }  
+</script>
+</body>
+</html>
